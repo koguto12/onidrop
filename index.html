@@ -5,9 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OniDrop – Kolekcja</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
-  <style>body { margin:0; font-family:'Rajdhani',sans-serif; background:#0b0b0b; color:#fff; } /* Stylizacja pominięta dla skrótu */</style>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Rajdhani', sans-serif;
+      background-color: #0b0b0b;
+      color: #fff;
+    }
+    header {
+      background:#0f0f0f;
+      padding:20px;
+      text-align:center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(120deg, #1a1a1a, #0b0b0b, #1a1a1a);
+      animation: pulseBG 10s infinite ease-in-out;
+      z-index: 0;
+    }
+    @keyframes pulseBG {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: #111;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #ff0033aa;
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: scale(1.02);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .product-info h2 {
+      color: #ff0033;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .button {
+      background: #ff0033;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #e6002c;
+    }
+    .faq {
+      background-color: #111;
+      padding: 40px 20px;
+      border-radius: 12px;
+    }
+    .faq h3 {
+      font-size: 2rem;
+      color: #ff0033;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .faq-item {
+      margin-top: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <header><h1>OniDrop</h1><p>Streetwear inspirowany światem anime, demonami i technologią</p></header>
+  <nav style="background:#111; padding:10px 20px; display:flex; justify-content:center; gap:30px; font-size:1.1rem; font-weight:bold;">
+    <a href="#kolekcja" style="color:#ff0033; text-decoration:none;">Kolekcja</a>
+    <a href="#lookbook" style="color:#ff0033; text-decoration:none;">Lookbook</a>
+    <a href="#onas" style="color:#ff0033; text-decoration:none;">O nas</a>
+    <a href="#faq" style="color:#ff0033; text-decoration:none;">FAQ</a>
+    <a href="#kontakt" style="color:#ff0033; text-decoration:none;">Kontakt</a>
+  </nav>
+  <header>
+    <h1 style="font-family:'Orbitron', sans-serif; font-size:2.5rem; color:#ff0033; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <img src="https://i.imgur.com/C0pLpvN.png" alt="Maska Oni" style="height: 40px; vertical-align: middle;">
+      OniDrop
+    </h1>
+    <p style="color:#aaa; margin-top:10px;">Streetwear inspirowany światem anime, demonami i technologią</p>
+  </header>
+  <main>
+    <section class="section" id="kolekcja">
+      <div class="product">
+        <img src="https://i.imgur.com/W1G7ZbV.png" alt="Bluza OniDrop">
+        <div class="product-info">
+          <h2>Crimson Oni Hoodie</h2>
+          <p>Mroczna bluza z grafiką demona i maską w stylu japońskim – bestseller kolekcji OniDrop.</p>
+          <a href="#" class="button">Zobacz produkt</a>
+        </div>
+      </div>
+      <div class="product">
+        <img src="https://i.imgur.com/jW0zqzR.png" alt="T-shirt OniDrop">
+        <div class="product-info">
+          <h2>Shadow Oni Tee</h2>
+          <p>Czarny T-shirt z czerwonym nadrukiem maski oni – minimalistyczny i stylowy.</p>
+          <a href="#" class="button">Zobacz produkt</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lookbook">
+      <h2 style="color:#ff0033; font-family:'Orbitron', sans-serif; text-align:center;">Lookbook</h2>
+      <p style="text-align:center; color:#ccc;">Zobacz jak noszą OniDrop nasi fani</p>
+      <div class="gallery">
+        <img src="https://i.imgur.com/0rKzTNi.jpg" alt="Look 1">
+        <img src="https://i.imgur.com/Y8KFYIX.jpg" alt="Look 2">
+        <img src="https://i.imgur.com/mnFTMQ8.jpg" alt="Look 3">
+        <img src="https://i.imgur.com/VYVKsXa.jpg" alt="Look 4">
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <h3>Najczęściej zadawane pytania</h3>
+      <div class="faq-item">
+        <strong>Czy oferujecie wysyłkę do Polski?</strong>
+        <p>Tak! Wysyłamy do całej Polski i wielu krajów na świecie.</p>
+      </div>
+      <div class="faq-item">
+        <strong>Jakie rozmiary są dostępne?</strong>
+        <p>Od XS do XXL – szczegóły znajdziesz w opisie każdego produktu.</p>
+      </div>
+    </section>
+
+    <section class="section" style="text-align:center;">
+      <h2 style="color:#ff0033; font-family:'Orbitron', sans-serif;">Zapisz się do newslettera</h2>
+      <p>Zgarnij 10% zniżki na pierwsze zamówienie!</p>
+      <form style="margin-top:20px;">
+        <input type="email" placeholder="Twój email" style="padding:10px; border:none; border-radius:8px; margin-right:10px; width:250px;">
+        <button class="button" type="submit">Zapisz się</button>
+      </form>
+    </section>
+
+    <section class="section" id="onas" style="text-align:center;">
+      <h2 style="color:#ff0033; font-family:'Orbitron', sans-serif;">O nas</h2>
+      <p>OniDrop to polska marka streetwear inspirowana japońską kulturą, anime i demonami. Tworzymy odzież dla fanów unikalnego stylu i klimatu.</p>
+    </section>
+
+    <section class="section" id="kontakt" style="text-align:center;">
+      <h2 style="color:#ff0033; font-family:'Orbitron', sans-serif;">Kontakt</h2>
+      <p>Masz pytania? Napisz do nas: <a href="mailto:kontakt@onidrop.pl" style="color:#ff0033; text-decoration:none;">kontakt@onidrop.pl</a></p>
+    </section>
+
+    <footer class="section" style="text-align:center; font-size:0.9rem; color:#666;">
+      <p>&copy; 2025 OniDrop. All rights reserved.</p>
+      <p><a href="#" style="color:#ff0033; text-decoration:none;">Kontakt</a> | <a href="#" style="color:#ff0033; text-decoration:none;">Regulamin</a></p>
+    </footer>
+  </main>
 </body>
 </html>
